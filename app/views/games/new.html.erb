@@ -1,0 +1,21 @@
+<h1>New Game</h1>
+
+<ul class="letters">
+  <li><%= @letters[0] %></li>
+  <li><%= @letters[1] %></li>
+  <li><%= @letters[2] %></li>
+  <li><%= @letters[3] %></li>
+  <li><%= @letters[4] %></li>
+  <li><%= @letters[5] %></li>
+  <li><%= @letters[6] %></li>
+  <li><%= @letters[7] %></li>
+  <li><%= @letters[8] %></li>
+  <li><%= @letters[9] %></li>
+
+
+<form action="/score" method="POST">
+  <input type="text" name="answer" id="text-field">
+  <input type="submit" value="Play!" id="submit">
+  <%= hidden_field_tag :grid, @letters %>
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+</form>
